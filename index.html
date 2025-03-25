@@ -8,25 +8,34 @@
 </head>
 <body>
 
-    <header>
+    <!-- Navigation -->
+    <nav>
         <h1>EmpowerHer</h1>
-        <button class="menu-btn">☰</button>
-    </header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="track-me.html">Track Me</a></li>
+            <li><a href="add-friends.html">Add Friends</a></li>
+            <li><a href="record.html">Record</a></li>
+            <li><a href="fake-call.html">Fake Call</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+    </nav>
 
-    <main class="container">
-        <div class="user-info">
-            <h2>Hello, Monica</h2>
-            <button class="sos-btn">SOS</button>
-        </div>
+    <!-- Home Page -->
+    <div class="home-container">
+        <h2>Hello, Monica</h2>
+        <button onclick="navigateTo('track-me.html')">Track Me</button>
+        <button onclick="navigateTo('add-friends.html')">Add Friends</button>
+        <button onclick="navigateTo('record.html')">Record</button>
+        <button onclick="navigateTo('fake-call.html')">Fake Call</button>
+        <button onclick="navigateTo('history.html')">History</button>
+    </div>
 
-        <div class="menu">
-            <button onclick="navigateTo('track-me.html')">🚶‍♀️ Track Me</button>
-            <button onclick="navigateTo('add-friends.html')">👫 Add Friends</button>
-            <button onclick="navigateTo('record.html')">🎤 Record</button>
-            <button onclick="navigateTo('record-history.html')">📜 Recording History</button>
-        </div>
-    </main>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
 
-    <script src="script.js"></script>
 </body>
 </html>

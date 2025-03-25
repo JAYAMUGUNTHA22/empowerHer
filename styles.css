@@ -182,3 +182,18 @@ header {
 .hidden {
     display: none;
 }
+
+.fake-call-container {
+    text-align: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fake-call-container input, .fake-call-container button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}

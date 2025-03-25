@@ -166,3 +166,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.initMap = initMap;
 });
+
+// Navigation Function
+function navigateTo(page) {
+    window.location.href = page;
+}
+
+// Fake Call AI Integration
+document.addEventListener("DOMContentLoaded", function () {
+    const startCallButton = document.getElementById("startCall");
+    if (startCallButton) {
+        startCallButton.addEventListener("click", function () {
+            const callerName = document.getElementById("callerName").value || "Police";
+            const message = `Hello, this is ${callerName}. How can I help you?`;
+
+            // Generate AI voice
+            generateAIResponse(message);
+        });
+    }
+});
+
+async function generateAIResponse(text) {
+    const audioElement = document.getElementById("audioPlayer");
+
+    // Using OpenAI TTS (replace 'your-api-key' with a valid key)
+    const response = await fetch("https://api.openai.com/v1/audio/speech", {
+        method: "POST",
+        headers: {
+            "Authorization": "Bearer your-api-key",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            model: "tts-1",
+            input: text,
+            voice: "alloy"
+        })
+    });
+
+    if (response.ok) {
+        const audioBlob = await response.blob();
+        const audioURL = URL.createObjectURL(audioBlob);
+        audioElement.src = audioURL;
+        audioElement.play();
+    } else {
+        console.error("Failed to fetch AI audio");
+    }
+}
