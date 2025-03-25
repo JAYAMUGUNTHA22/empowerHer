@@ -193,7 +193,7 @@ async function generateAIResponse(text) {
     const response = await fetch("https://api.openai.com/v1/audio/speech", {
         method: "POST",
         headers: {
-            "Authorization": "Bearer your-api-key",
+            "Authorization": "Bearer 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",
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
