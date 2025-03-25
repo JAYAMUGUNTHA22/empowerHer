@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.sos-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.menu button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: darkblue;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+#map {
+    height: 500px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+    margin-left: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.container {
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sos-btn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu button {
+    padding: 15px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.record-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.subtitle {
+    color: gray;
+}
+
+.timer {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-record, .btn-play, .btn-pause {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

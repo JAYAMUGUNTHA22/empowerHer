@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Call</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button onclick="goBack()">← Back</button>
+
+    <!-- Fake Call UI -->
+    <div class="fake-call-container">
+        <h2>Fake Call</h2>
+        <label for="callerName">Caller Name:</label>
+        <input type="text" id="callerName" placeholder="Enter a name (e.g., Police)">
+        
+        <button id="startCall">Start Call</button>
+        
+        <audio id="audioPlayer" controls style="display: none;"></audio>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
