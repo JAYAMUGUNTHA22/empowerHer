@@ -6,6 +6,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.navigateTo = navigateTo;
 
+    function navigate(page) {
+        window.location.href = page;
+    }
+    
+    function loadMap() {
+        let map = L.map('map').setView([11.1271, 78.6569], 7); // Tamil Nadu center
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Safe Area
+        L.circle([11.0168, 76.9558], {
+            color: 'green',
+            fillColor: '#0f0',
+            fillOpacity: 0.5,
+            radius: 10000
+        }).addTo(map).bindPopup("Safe Zone - Coimbatore");
+        
+        // Danger Area
+        L.circle([13.0827, 80.2707], {
+            color: 'red',
+            fillColor: '#f00',
+            fillOpacity: 0.5,
+            radius: 15000
+        }).addTo(map).bindPopup("Danger Zone - Chennai");
+    }
+    
     /*** FRIENDS MANAGEMENT ***/
     let friendList = JSON.parse(localStorage.getItem("friends")) || [];
 
